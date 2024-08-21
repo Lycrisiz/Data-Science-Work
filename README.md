@@ -326,11 +326,6 @@ Info_grpoup[7].to_excel(Ruta + r'\python\Datos modificados' + r"\Grouped_Homicid
 Info_grpoup[8].to_excel(Ruta + r'\python\Datos modificados' + r"\Grouped_Amenazas_Polic_a_Nacional_de_Colombia_20240702_py.xlsx",sheet_name='Gr_Amenazas_Polic_a_Nacional_de_Colombia',index = True)
 ```
 
-    c:\Users\danie\.conda\envs\py312\Lib\site-packages\openpyxl\workbook\child.py:99: UserWarning: Title is more than 31 characters. Some applications may not be able to read the file
-      warnings.warn("Title is more than 31 characters. Some applications may not be able to read the file")
-    
-
-
 ```python
 Cords.to_excel(Ruta + r'\python\Datos modificados' + r"\Clasificador_Geográfico_py.xlsx",sheet_name='Geoclasificador',index = False)
 Cords2.to_excel(Ruta + r'\python\Datos modificados' + r"\Geoportal_Divipola_py.xlsx",sheet_name='Geoclasificador2',index = False)
