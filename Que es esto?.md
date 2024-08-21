@@ -1,1 +1,0 @@
-Esto es parte del Trabajo que he Realizado, si alguno esta interesado en saber sobre mis codigos, lo que ha sido parte de mi trabajo mas allá de mi experiencia, aqui es donde puede ver que he programado y que nivel poseo, pueden descargar los codigos que programe en su totalidad, asi como el dash board de la policia nacional para ver que tan buen construyo dashboards
