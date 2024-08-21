@@ -121,10 +121,6 @@ for idx, i in enumerate(Info):
 ```python
 Info[0].tail()
 ```
-
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
