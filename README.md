@@ -291,11 +291,6 @@ Info[8].to_excel(Ruta + r'\python\Datos modificados' + r"\Amenazas_Polic_a_Nacio
 R_Subregiones.to_excel(Ruta + r'\python\Datos modificados' + r"\subregiones_py.xlsx",sheet_name='subregiones',index = False)
 ```
 
-    c:\Users\danie\.conda\envs\py312\Lib\site-packages\openpyxl\workbook\child.py:99: UserWarning: Title is more than 31 characters. Some applications may not be able to read the file
-      warnings.warn("Title is more than 31 characters. Some applications may not be able to read the file")
-    
-
-
 ```python
 TablaDeptos = R_Subregiones['NOMBRE_DEPTO'].unique()
 TablaMunicipios = R_Subregiones['NOMBRE_MPIO'].unique()
