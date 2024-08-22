@@ -30,7 +30,7 @@ Lastly, and not least importantly, the map of arrests and the map of weapon seiz
 
 ![](https://github.com/Lycrisiz/Data-Science-Work/blob/main/Mi%20trabajo%20(resumido)%20-%20My%20Work%20(sumarized)/Semillero_page-0006.jpg?raw=true)
 
-Codigo de python
+Python Code
 
 ```python
 import pandas as pd
