@@ -1,4 +1,4 @@
-Este Repositorio contiene un poco de lo que ha sido mi trabajo, en el area de ciencia de datos, y los codigos que he programado, en python y en R, asi mismo mas abajo, se puede pareciar uno de mis proyectos mas recientes, en el cual obtuve datos de la policia nacional(datos abiertos) de los cuales realicé su respectiva limpieza y transformacion para subirlos posteriormente a Power Bi, con sus respectivas relaciones y su debido dashboard.
+This repository contains some of my work in the field of data science and the code I have programmed in Python and R. Additionally, further down, you can see one of my most recent projects, in which I obtained data from the National Police ([open data](https://www.datos.gov.co)). I performed the respective cleaning and transformation of this data to later upload it to Power BI, with the corresponding relationships and the necessary dashboard.
 
 ![](https://github.com/Lycrisiz/Data-Science-Work/blob/main/Datos/imagen_2024-08-21_154505469.png?raw=true)
 
