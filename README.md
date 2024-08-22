@@ -20,6 +20,8 @@ This second sheet reflects the number of thefts by location. To achieve this, a 
 
 This third sheet reflects the counterpart of thefts (in blue), showing the daily arrests made by the National Police. Unfortunately, this data is limited to 2010-2015. However, it shows a trend that contrasts with what was previously observed in the thefts sheet. While arrests seem to be fewer at the beginning of the year, thefts do not show this trend, indicating lower police effectiveness during that time of the year.
 
+![](https://github.com/Lycrisiz/Data-Science-Work/blob/main/Mi%20trabajo%20(resumido)%20-%20My%20Work%20(sumarized)/Semillero_page-0004.jpg?raw=true)
+
 On the other hand, the report on weapon seizures (in green) shows that in recent years fewer weapons have been seized, until 2023, where a significant increase can be observed. This is a positive step towards improving security, which could perhaps be attributed to the decrease in thefts in 2024 compared to 2023.
 
 Lastly, and not least importantly, the map of arrests and the map of weapon seizures can be observed. These maps could be contrasted with the map of thefts to compare side by side which departments and/or municipalities in Colombia have shown less effectiveness. From this, respective sanctions or changes in their directives could be implemented.
