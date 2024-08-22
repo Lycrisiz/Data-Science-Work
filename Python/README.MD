@@ -3,14 +3,6 @@ In this folder, I have the Python files I have worked on. They demonstrate my kn
 
 ```python
 import pandas as pd
-import datetime as dt
-import unidecode
-import numpy as np
-
-```
-
-```python
-import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
