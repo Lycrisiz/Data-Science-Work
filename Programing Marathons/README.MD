@@ -252,27 +252,4 @@ for i in range(n[1]):
     4 2 0 
 
 
-```python
-f = set()
-f.add(1)
-f.add(2)
-```
-
-
-```python
-len(f)
-```
-
-
-
-
-    2
-
-
-
-
-```python
-4 2 0 
-
-```
 
