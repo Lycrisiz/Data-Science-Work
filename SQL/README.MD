@@ -1,1 +1,1 @@
-In this folder, I keep all the scripts I have created in MySQL.
+In this folder, I keep some scripts I have created in MySQL.
