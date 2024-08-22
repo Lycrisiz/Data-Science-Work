@@ -70,3 +70,91 @@ IF975.to_excel("../Drops py/Informe 975 Mayo_py.xlsx", sheet_name='Hoja1', index
 
 ```
 
+
+##Script_CertificacionesALi.ipynb
+
+```python
+from docx import Document
+import pandas as pd
+from docx2pdf import convert
+
+DTPC = pd.read_excel("../Excels/Ali/Datos para Certificacion - copia.xlsx") #lee un excel con la informacion a automatizar
+def modificar_documento(x):
+
+    #este modulo filtra por categoria, hay distintos formatos de documentos que se deben leer, como formato 1 formato 2 etc...
+    #dependiendo de una columna en excel que se llama proyecto, esta columna la usas para seleccionar el formato
+
+    if x['PROYECTO'] == "HUB":
+        doc = Document("..\Excels\Ali\Hub infinity.docx") #selecciono el tipo de documento 
+        save = "../Drops py/Ali Drops/Certificacion HUB INFINITY "+str(x['NOMBRE'])+".docx" #selecciono como lo voy a guardar
+    if x['PROYECTO'] == "SLT":
+        doc = Document("..\Excels\Ali\Slt.docx")
+        save = "../Drops py/Ali Drops/Certificacion STL "+str(x['NOMBRE'])+".docx"
+    if x['PROYECTO'] == "VENTA EMPRESA":
+        doc = Document("..\Excels\Ali\Venta empresa.docx")
+        save = "../Drops py/Ali Drops/Certificacion VENTA EMPRESA "+str(x['NOMBRE'])+".docx"
+    if x['PROYECTO'] == "OMNICANAL":
+        doc = Document("..\Excels\Ali\Omnicanal.docx")
+        save = "../Drops py/Ali Drops/Certificacion OMNICANAL "+str(x['NOMBRE'])+".docx"
+    if x['PROYECTO'] == "ROBOTS":
+        doc = Document("..\Excels\Ali\Robots.docx")# = C:\\Users\\Usuario\\Documents\\Excels\Ali\Robots.docx
+        save = "../Drops py/Ali Drops/Certificacion ROBOTS "+str(x['NOMBRE'])+".docx"
+
+
+    #codigo
+    if int(x['NUMERO MESES']) == x['NUMERO MESES']:
+        val = int(x['NUMERO MESES']) #es como un astype, consume memoria al arreglar las variables dentro del codigo
+    else: 
+        val  = x['NUMERO MESES']
+
+    
+    for paragraph in doc.paragraphs:
+        #importa el texto, tiene un error y lo importa mal, tiene muchos saltos de lina pero es lo suficientemente bueno para que funcione
+        #en el documento los remplazables los modifiqué asi "vvvvvvvvvvb" para que no me modifiqe el resto del documento, son keys por asi decirlo
+        if "vvvvvvvvvvb" in paragraph.text:
+                inline = paragraph.runs
+                for i in range(len(inline)):
+                    if "vvvvvvvvvvb" in inline[i].text:
+                        text = inline[i].text.replace("vvvvvvvvvvb",x['NOMBRE'])
+                        inline[i].text = text
+    for paragraph in doc.paragraphs: #si no estoy mal importa el parrafo
+        if "vvvvvvvvvvc" in paragraph.text: #pregunta si la key esta en el parrafo
+                inline = paragraph.runs #in line es como las lineas del parrafo
+                for i in range(len(inline)):
+                    if "vvvvvvvvvvc" in inline[i].text: #pregunta si en alguna linea encuentra lo que debe modificar
+                        text = inline[i].text.replace("vvvvvvvvvvc",str(x['CEDULA'])) #remplaza el valor por el de excel
+                        inline[i].text = text#sobre escribe el valor 
+    for paragraph in doc.paragraphs:
+        if "vvvvvvvvvvd" in paragraph.text:
+                inline = paragraph.runs
+                for i in range(len(inline)):
+                    if "vvvvvvvvvvd" in inline[i].text:
+                        text = inline[i].text.replace("vvvvvvvvvvd", str(x['CARGO']))
+                        inline[i].text = text
+    for paragraph in doc.paragraphs:
+        if "vvvvvvvvvve" in paragraph.text:
+                inline = paragraph.runs
+                for i in range(len(inline)):
+                    if "vvvvvvvvvve" in inline[i].text:
+                        text = inline[i].text.replace("vvvvvvvvvve", str(x['% PROYECTO'])+"%")
+                        inline[i].text = text
+    for paragraph in doc.paragraphs:
+        if "vvvvvvvvvvf" in paragraph.text:
+                inline = paragraph.runs
+                for i in range(len(inline)):
+                    if "vvvvvvvvvvf" in inline[i].text:
+                        text = inline[i].text.replace("vvvvvvvvvvf", str(val))
+                        inline[i].text = text
+    for paragraph in doc.paragraphs: 
+        if "vvvvvvvvvvg" in paragraph.text:
+                inline = paragraph.runs
+                for i in range(len(inline)):
+                    if "vvvvvvvvvvg" in inline[i].text:
+                        text = inline[i].text.replace("vvvvvvvvvvg", str(x['VALOR A CERTIFICAR']))
+                        inline[i].text = text
+                        #modifica todo el texto, y lo guarda 
+    doc.save(save)
+    convert(save) #y lo convierte a pdf 
+DTPC.apply(lambda x: modificar_documento(x), axis = 1) #aplica la funcion
+```
+
