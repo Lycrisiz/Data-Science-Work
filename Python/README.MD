@@ -1,7 +1,7 @@
 En esta Carpeta Contengo los archivos de Python en los que he trabajado, son la demostracion de mi conocimiento en Python
 In this folder, I have the Python files I have worked on. They demonstrate my knowledge in Python.
 
-##INFORME975.IPYNB
+## INFORME975.IPYNB
 
 ```python
 import pandas as pd
@@ -71,7 +71,7 @@ IF975.to_excel("../Drops py/Informe 975 Mayo_py.xlsx", sheet_name='Hoja1', index
 ```
 
 
-##Script_CertificacionesALi.ipynb
+## Script_CertificacionesALi.ipynb
 
 ```python
 from docx import Document
