@@ -1,33 +1,32 @@
 This repository contains some of my work in the field of data science and the code I have programmed in Python and R. Additionally, further down, you can see one of my most recent projects, in which I obtained data from the National Police ([open data](https://www.datos.gov.co)). I performed the respective cleaning and transformation of this data to later upload it to Power BI, with the corresponding relationships and the necessary dashboard.
 
+Firstly, these relationships were established to ensure that all data used the same language regarding departments, dates, and municipalities. Additionally, during data processing, latitude and longitude were added by cross-referencing to avoid errors in the graphs, as the data consisted of several reports per day and not a daily aggregate. Therefore, a different database was created, consisting of grouped data (gr), allowing for more information to be obtained from the data without sacrificing the number of reports received per day.
+
 ![](https://github.com/Lycrisiz/Data-Science-Work/blob/main/Datos/imagen_2024-08-21_154505469.png?raw=true)
 
-Primeramente estas relaciones se hicieron con el fin de que todos los datos manejasen un mismo idioma en lo que respecta a departamentos, fechas y municipios, asi mismo al momento de procesar los datos, se les agregó latitud y longitud cruzandolos con el fin de no obener errores en la graficas puesto que los datos consistian en varios reportes por dia y no un conglomerado diario, por lo que se creó una base diferente que consistió en los datos agrupados (gr) de esta forma se puede obtener mas informacion de los datos sin sacrificar la cantidad de reportes recibidos por dia.
- 
+This first dashboard allows us to visualize the historical increase in theft reports over time in Colombia.
+
+The questions it raises are:
+
+Why has the slope of thefts increased since 2016?
+What factors in security or the government system negatively affected and benefited thefts?
+It can be seen that, despite returning to its usual trend after the pandemic, recent security measures have been effective. Compared to 2023, 2024 shows better performance.
+
 ![](https://github.com/Lycrisiz/Data-Science-Work/blob/main/Mi%20trabajo%20(resumido)%20-%20My%20Work%20(sumarized)/Semillero_page-0002.jpg?raw=true)
 
-Este Primer Dashboard, permite visualizar, el historico de como han aumentado los reportes de hurto a travez del tiempo en Colombia
-
-Las preguntas que deja son: 
-¿por que la pendiente de los hurtos ha crecido desde 2016? 
-¿que factores en la seguridad o el sistema de gobierno afectaron negativamente beneficiando lo hurtos?
-Se puede apreciar como pese a voler a su tendencia habitual luego de la pandemia, las medidas de seguridad recientes, han sido efectivas en comparacion con 2023, 2024 presenta un mejor desempeño.
+This second sheet reflects the number of thefts by location. To achieve this, a cross-reference was made with a database that handled latitude and longitude, since Power BI does not distinguish between some municipalities with iconic names (e.g., Madrid) and the cities those names are based on.
 
 ![](https://github.com/Lycrisiz/Data-Science-Work/blob/main/Mi%20trabajo%20(resumido)%20-%20My%20Work%20(sumarized)/Semillero_page-0003.jpg?raw=true)
 
-Esta Segunda Hoja refleja, la cantidad de hurtos por lugar, para esto, se realizo un cruce con una base de datos que manejase latitud y longitud, puesto que Power Bi no distigue de algunos municipios con nombres iconicos (madrid) y las ciudades en las que se basan esos nombres.
+This third sheet reflects the counterpart of thefts (in blue), showing the daily arrests made by the National Police. Unfortunately, this data is limited to 2010-2015. However, it shows a trend that contrasts with what was previously observed in the thefts sheet. While arrests seem to be fewer at the beginning of the year, thefts do not show this trend, indicating lower police effectiveness during that time of the year.
 
-![](https://github.com/Lycrisiz/Data-Science-Work/blob/main/Mi%20trabajo%20(resumido)%20-%20My%20Work%20(sumarized)/Semillero_page-0004.jpg?raw=true)
+On the other hand, the report on weapon seizures (in green) shows that in recent years fewer weapons have been seized, until 2023, where a significant increase can be observed. This is a positive step towards improving security, which could perhaps be attributed to the decrease in thefts in 2024 compared to 2023.
 
-Esta Tercera hoja refleja la contra parte de los hurtos (azul) mostrando las capturas por dia que realiza la policia nacional, lastimosamente esta data esta limitada, 2010 - 2015 sin embago muestra una tendencia, la cual va en contra con lo apreciado anteiormente en la hoja de hurtos, pues, si bien las capaturas parecen ser pocas a principio de año, los hurtos no presentan esta tendencia, es decir, hay menor efectividad de la policia en esa epoca del año.
-
-Por otra parte Se puede apreciar (verde) el informe de incautacion de armas, el cual, muestra, que en los ultimos años se han venido incautando menos armas, hasta 2023 en donde se puede evidenciar el salto grande, lo cual es un buen golpe en mejorar la seguridad por el cual quizás podria atribuirsele, la disminucion de hurtos en 2024 en comparacion con 2023.
+Lastly, and not least importantly, the map of arrests and the map of weapon seizures can be observed. These maps could be contrasted with the map of thefts to compare side by side which departments and/or municipalities in Colombia have shown less effectiveness. From this, respective sanctions or changes in their directives could be implemented.
 
 ![](https://github.com/Lycrisiz/Data-Science-Work/blob/main/Mi%20trabajo%20(resumido)%20-%20My%20Work%20(sumarized)/Semillero_page-0005.jpg?raw=true)
 
 ![](https://github.com/Lycrisiz/Data-Science-Work/blob/main/Mi%20trabajo%20(resumido)%20-%20My%20Work%20(sumarized)/Semillero_page-0006.jpg?raw=true)
-
-Por ultimo y no menos importante se puede aprecial el mapa de capturas, el cual podria contrastasrse con el mapa de hurtos para comparar lado a lado en que departamentos y/o municipios de colombia se ha venido teniendo, menos efectividad, del cual se podrian realizar sanciones respectivas, o cambios en su directriz.
 
 Codigo de python
 
