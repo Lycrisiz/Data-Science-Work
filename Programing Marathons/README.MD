@@ -1,4 +1,4 @@
-“This is part of the code I write during programming marathons. Most of it consists of input and output, so there isn’t much to see here. The important part is the process of solving the big problem. Most of the results are the test cases to see if it works correctly or not.”
+This is part of the code I write during programming marathons. Most of it consists of input and output, so there isn’t much to see here. The important part is the process of solving the big problem. Most of the results are the test cases to see if it works correctly or not.
 
 ```python
 n = int(input())
